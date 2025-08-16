@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "aghmaz"
+    },
+    {
+        "id": 2,
+        "name": "huzaifa"
+    }
+]
+// vite + mui + tailwind + redux toolkit  =>  shahzaib 
+// dummy.json => resume => paste
+// template => huzaifa.jsx => resume UI 
+//  main.jsx => props => dummy.json => huzaifa.jsx
