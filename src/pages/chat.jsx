@@ -5,6 +5,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import RecipeReviewCard from "../Card";
 import { useSelector } from "react-redux";
+import { useAuth } from "../auth/AuthContext";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -36,6 +37,7 @@ function a11yProps(index) {
 }
 
 const chat = () => {
+  const { user } = useAuth();
   const counter = useSelector((state) => state.counter.value);
   const fetchData = async () => {
     await fetch("https://jsonplaceholder.typicode.com/users")
@@ -69,6 +71,7 @@ const chat = () => {
   };
   return (
     <Box sx={{ width: "100%" }}>
+      <h2>user data :{user?.email}</h2>
       <h2>counter :{counter}</h2>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
