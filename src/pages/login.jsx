@@ -37,55 +37,101 @@ const Login = () => {
       setLoading(false);
     }
   };
-
+  //   sm md lg xl 2xl 3xl 4xl .....
+  //  px py p ps pe pt pb   , mx my ms me mt mb
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="container mx-auto bg-[#3e95b0]">
+      <h1 className="textTransform: uppercase text-[256px]">Login</h1>
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-col-1  gap-4">
+        <div>
+          <p className="border text-red-400 rounded-lg ">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias
+            a, placeat architecto modi eaque minus ratione nemo et eligendi.
+            Ducimus quasi minima numquam voluptate quaerat officia fuga odio
+            dolorum at. Iure debitis officiis aliquam qui itaque, magnam aut
+            unde. Cum iste eum rerum recusandae vitae laborum ducimus error
+            ipsum maiores, distinctio illum, expedita voluptate nihil molestias?
+          </p>
+        </div>
+        <div>
+          <p className="border text-red-400 rounded-3xl shadow-2xl">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias
+            a, placeat architecto modi eaque minus ratione nemo et eligendi.
+            Ducimus quasi minima numquam voluptate quaerat officia fuga odio
+            dolorum at. Iure debitis officiis aliquam qui itaque, magnam aut
+            unde. Cum iste eum rerum recusandae vitae laborum ducimus error
+            ipsum maiores, distinctio illum, expedita voluptate nihil molestias?
+          </p>
+        </div>
+        <div>
+          <p className="border text-red-400 rounded-full">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias
+            a, placeat architecto modi eaque minus ratione nemo et eligendi.
+            Ducimus quasi minima numquam voluptate quaerat officia fuga odio
+            dolorum at. Iure debitis officiis aliquam qui itaque, magnam aut
+            unde. Cum iste eum rerum recusandae vitae laborum ducimus error
+            ipsum maiores, distinctio illum, expedita voluptate nihil molestias?
+          </p>
+        </div>
+        <div>
+          <p className="border text-red-400 rounded-e-xl">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias
+            a, placeat architecto modi eaque minus ratione nemo et eligendi.
+            Ducimus quasi minima numquam voluptate quaerat officia fuga odio
+            dolorum at. Iure debitis officiis aliquam qui itaque, magnam aut
+            unde. Cum iste eum rerum recusandae vitae laborum ducimus error
+            ipsum maiores, distinctio illum, expedita voluptate nihil molestias?
+          </p>
+        </div>
+      </div>
+
       {loading ? (
         " API is calling.. "
       ) : (
-        <Formik
-          initialValues={initialValues}
-          onSubmit={handleSubmit}
-          validationSchema={validationSchema}
-        >
-          {({ errors, touched }) => (
-            <Form>
-              <div>
-                <label htmlFor="email">Email</label>
-                <Field
-                  id="email"
-                  name="email"
-                  placeholder="jane@acme.com"
-                  type="email"
-                />
-                {touched.email && errors.email && (
-                  <div style={{ color: "red" }}>{errors.email}</div>
-                )}
-                {/* <ErrorMessage
+        <div className="w-[460px]">
+          <Formik
+            initialValues={initialValues}
+            onSubmit={handleSubmit}
+            validationSchema={validationSchema}
+          >
+            {({ errors, touched }) => (
+              <Form>
+                <div>
+                  <label htmlFor="email">Email</label>
+                  <Field
+                    id="email"
+                    name="email"
+                    placeholder="jane@acme.com"
+                    type="email"
+                  />
+                  {touched.email && errors.email && (
+                    <div style={{ color: "red" }}>{errors.email}</div>
+                  )}
+                  {/* <ErrorMessage
                   name="email"
                   component="div"
                   style={{ color: "red" }}
                 /> */}
-              </div>
-              <div>
-                <label htmlFor="password">password</label>
-                <Field
-                  id="password"
-                  name="password"
-                  placeholder="please enter your password"
-                />
-                <ErrorMessage
-                  name="password"
-                  component="div"
-                  className="error"
-                />
-              </div>
+                </div>
+                <div>
+                  <label htmlFor="password">password</label>
+                  <Field
+                    id="password"
+                    name="password"
+                    placeholder="please enter your password"
+                  />
+                  <ErrorMessage
+                    name="password"
+                    component="div"
+                    className="error"
+                  />
+                </div>
 
-              <button type="submit">Submit</button>
-            </Form>
-          )}
-        </Formik>
+                <button type="submit">Submit</button>
+              </Form>
+            )}
+          </Formik>
+        </div>
       )}
     </div>
   );
