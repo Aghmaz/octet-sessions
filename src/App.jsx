@@ -27,7 +27,7 @@ function App() {
             }
           />
           <Route path="/newlogin" element={<NewLogin />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
           <Route path="/home/:userId" element={<Dashboard />} />
           <Route path="/parent" element={<Parent />} />
           <Route path="/form" element={<HorizontalNonLinearStepper />} />
