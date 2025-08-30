@@ -6,6 +6,7 @@ import Parent from "./components/parent";
 import HorizontalNonLinearStepper from "./components/multiStepForm";
 import CounterApp from "./redux/counterApp";
 import Login from "./pages/login";
+import Hoc from "./Hoc";
 import Dashboard from "./pages/dashboard";
 import { AuthProvider } from "./auth/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -27,7 +28,8 @@ function App() {
             }
           />
           <Route path="/newlogin" element={<NewLogin />} />
-          <Route path="/" element={<Login />} />
+          {/* <Route path="/" element={<Login />} /> */}
+          <Route path="/" element={<Hoc />} />
           <Route path="/home/:userId" element={<Dashboard />} />
           <Route path="/parent" element={<Parent />} />
           <Route path="/form" element={<HorizontalNonLinearStepper />} />

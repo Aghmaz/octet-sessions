@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
-
+import UserList from "../components/UserList";
 const NewLogin = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -45,6 +45,7 @@ const NewLogin = () => {
 
   return (
     <div>
+      <UserList users={["ahmad", "shoaib"]} />
       <h1>Login</h1>
       {loading ? (
         " API is calling.. "
