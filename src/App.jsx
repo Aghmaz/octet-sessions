@@ -11,6 +11,7 @@ import Dashboard from "./pages/dashboard";
 import { AuthProvider } from "./auth/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import NewLogin from "./pages/newLogin";
+import LazyLoading from "./lazyLoading";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/newlogin" element={<NewLogin />} />
           {/* <Route path="/" element={<Login />} /> */}
           <Route path="/" element={<Hoc />} />
+          <Route path="/lazyloading" element={<LazyLoading />} />
           <Route path="/home/:userId" element={<Dashboard />} />
           <Route path="/parent" element={<Parent />} />
           <Route path="/form" element={<HorizontalNonLinearStepper />} />
